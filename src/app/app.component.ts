@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Recipe } from './Recipe';
 import { RestService } from './rest.service';
 
@@ -11,16 +12,22 @@ export class AppComponent implements OnInit {
  // title = 'crescendo-exam';
   uuid: any[] | undefined;
   title: any[]  | undefined;
-  constructor(private rs : RestService){}
+  thumbnail: any;
+  constructor(private rs : RestService, private sanitizer: DomSanitizer){}
 
   columns = ["UUID"];
-  index   = ["uuid"];
-   recipe: Recipe[] = new Array<Recipe>()
+  index   = ["uuid","images"];
+  recipe: Recipe[] = new Array<Recipe>()
   ngOnInit(): void {
     this.rs.getRecipes().subscribe
     (
+      
       (response)=> {
+       
         this.recipe = response;
+        let objectURL = 'data:image/jpeg;base64,' ;
+
+        this.thumbnail = this.sanitizer.bypassSecurityTrustUrl(objectURL);
        
       },
        (error)=>

@@ -76,7 +76,7 @@ form ion-icon {
   overflow: hidden;
 }
 .item img {
-  width: 100%;
+  width: 50%;
   height: 300px;
   border-radius: 4px;
 }
