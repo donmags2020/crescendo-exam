@@ -1,0 +1,9 @@
+.search-result-details {
+    margin-top:-2786px;float: right;margin-right:86px;
+    width: 35%;
+    display: grid;
+    grid-gap: 25px;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+    border-color: aqua;
+    border:1px solid;
+  }
