@@ -63,7 +63,8 @@ form ion-icon {
 }
 .search-result {
   margin-top: 50px;
-  width: 100%;
+  margin-left: 55px;
+  width: 60%;
   display: grid;
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
