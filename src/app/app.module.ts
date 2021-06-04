@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RestService } from './rest.service';
+import { DetailsrecipeComponent } from './detailsrecipe/detailsrecipe.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsrecipeComponent
   ],
   imports: [
     BrowserModule,

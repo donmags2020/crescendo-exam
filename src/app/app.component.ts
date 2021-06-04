@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   constructor(private rs : RestService, private sanitizer: DomSanitizer){}
 
   columns = ["UUID"];
-  index   = ["uuid","images"];
+  index   = ["uuid","images","full"];
   recipe: Recipe[] = new Array<Recipe>()
   ngOnInit(): void {
     this.rs.getRecipes().subscribe
